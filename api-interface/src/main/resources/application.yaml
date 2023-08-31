@@ -1,0 +1,31 @@
+server:
+  port: 8123
+  servlet:
+    context-path: /api/interface/
+
+spring:
+  application:
+    name: api-interface
+  #注册中心和配置中心的配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 152.136.62.136:8848
+        username: nacos
+        password: nacos
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://152.136.62.136:3306/api_backend
+    username: root
+    password: 1481148515Gjh.
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+czq:
+  api:
+    access-key: czq
+    secret-key: abcdefg
